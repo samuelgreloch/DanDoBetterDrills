@@ -69,11 +69,11 @@ public class StringUtilities {
      * @return the middle character of `inputValue`
      */
     public static Character getMiddleCharacter(String inputValue){
+    String str = inputValue;
+    int index = 3;
+    char ch = str.charAt(index);
 
-        int cara = inputValue.length();
-        int middle = cara / 2;
-
-        return inputValue.charAt(middle);
+        return ch;
     }
 
     /**
@@ -81,11 +81,11 @@ public class StringUtilities {
      * @return the first sequence of characters
      */
     public static String getFirstWord(String spaceDelimitedString){
-
-
-
-        return spaceDelimitedString.substring(0, spaceDelimitedString.indexOf("")) ;
-    }
+                String str = spaceDelimitedString;
+                int frst = str.indexOf(" ");
+                String frstsp = str.substring(0,frst);
+                return  frstsp;
+     }
 
     /**
      * @param spaceDelimitedString a string delimited by spaces
@@ -93,16 +93,26 @@ public class StringUtilities {
      */
     public static String getSecondWord(String spaceDelimitedString){
 
+            String str = spaceDelimitedString;
+            String scnsp = str.substring(str.lastIndexOf(" ")+1);
+            return scnsp;
 
 
-        return null;
     }
 
     /**
      * @param stringToReverse
      * @return an identical string with characters in reverse order.
      */
-    public static String reverse(String stringToReverse){
-        return null;
+    public static String reverse(String stringToReverse) {
+
+            StringBuilder str = new StringBuilder();
+            str.append(stringToReverse);
+            return String.valueOf(str.reverse());
+
+
+
+
+
     }
 }
